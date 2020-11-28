@@ -53,7 +53,7 @@ class GameState:
             self.enpassantPossible = ()
         # castling 
         if move.isCastleMove:
-            if move.endCol- move.startCol ==2:
+            if abs(move.endCol- move.startCol) ==2:
                 self.board[move.endRow][move.endCol-1] = self.board[move.endRow][move.endCol+1]#moves the rook
                 self.board[move.endRow][move.endCol+1] = "--"
             else :
